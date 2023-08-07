@@ -3679,6 +3679,7 @@ p {
   .person-div.personright {
     flex-wrap: wrap-reverse;
     align-content: space-around;
+    padding-bottom: 0;
     display: block;
   }
 

@@ -3471,7 +3471,10 @@ p {
   }
 
   .button {
+    margin-left: auto;
+    margin-right: auto;
     font-size: 15px;
+    display: block;
   }
 
   .titel {
@@ -3494,9 +3497,11 @@ p {
 
   .section.light {
     padding-top: 10px;
+    padding-bottom: 10px;
   }
 
   .paragraph {
+    padding-bottom: 10px;
     font-size: 18px;
   }
 
@@ -3519,15 +3524,19 @@ p {
     text-align: left;
     margin-left: 0;
     padding-top: 10px;
+    padding-bottom: 20px;
   }
 
   .container {
+    flex-direction: row;
+    align-items: center;
     margin-left: 20px;
     margin-right: 20px;
     padding-top: 0;
   }
 
   .div-hero {
+    flex: 1;
     align-self: flex-end;
     margin-top: 0;
     margin-bottom: 0;
@@ -3661,11 +3670,16 @@ p {
   .person-div.personright {
     flex-wrap: wrap-reverse;
     align-content: space-around;
+    padding-bottom: 0;
     display: block;
   }
 
   .text-field {
     font-size: 18px;
+  }
+
+  .text-field.message {
+    padding-top: 10px;
   }
 }
 

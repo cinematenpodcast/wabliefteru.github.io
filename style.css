@@ -3495,18 +3495,15 @@ p {
   }
 
   .titel.wie {
+    justify-content: center;
     align-self: center;
     margin-bottom: 0;
     display: flex;
   }
 
-  .section {
+  .section, .section.light {
     padding-top: 0;
-  }
-
-  .section.light {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 0;
   }
 
   .paragraph {
@@ -3533,7 +3530,7 @@ p {
     text-align: left;
     margin-left: 0;
     padding-top: 10px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
   }
 
   .container {
@@ -3565,6 +3562,7 @@ p {
     align-content: stretch;
     justify-content: space-around;
     align-items: stretch;
+    padding-bottom: 15px;
     display: flex;
   }
 
@@ -3679,6 +3677,7 @@ p {
   .person-div.personright {
     flex-wrap: wrap-reverse;
     align-content: space-around;
+    padding-bottom: 0;
     display: block;
   }
 

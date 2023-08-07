@@ -2926,6 +2926,7 @@ p {
   color: #1f3338;
   text-align: center;
   text-transform: none;
+  cursor: pointer;
   background-color: #74f5ac;
   border-radius: 5px;
   order: 0;
@@ -3162,6 +3163,10 @@ p {
   font-weight: 300;
 }
 
+.spotifylink {
+  cursor: pointer;
+}
+
 .portret {
   max-width: 200px;
 }
@@ -3180,6 +3185,10 @@ p {
 
 .image-5, .image-6 {
   max-width: 75%;
+}
+
+.link-block {
+  cursor: pointer;
 }
 
 .person-div {
@@ -3670,7 +3679,6 @@ p {
   .person-div.personright {
     flex-wrap: wrap-reverse;
     align-content: space-around;
-    padding-bottom: 0;
     display: block;
   }
 

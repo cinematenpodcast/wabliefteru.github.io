@@ -3988,6 +3988,18 @@ p {
     margin-top: 0;
     margin-bottom: 0;
   }
+
+  .patreonlink {
+    justify-content: center;
+    transition-property: none;
+    display: flex;
+    transform: scale(.6);
+  }
+
+  .image-10 {
+    text-align: center;
+    display: inline-block;
+  }
 }
 
 @media screen and (max-width: 767px) {

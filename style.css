@@ -3932,6 +3932,24 @@ p {
   min-width: 15%;
 }
 
+.patreonlink {
+  transform-style: preserve-3d;
+  transition: transform .5s;
+  transform: translate(-111px)scale(.6);
+}
+
+.patreonlink:hover {
+  transform: translate(0px, 0px) scale3d(1none, 1none, 1none);
+}
+
+.image-10 {
+  transition: transform .5s;
+}
+
+.image-10:hover {
+  transform: scale(1.1);
+}
+
 @media screen and (max-width: 991px) {
   .nav-link {
     margin-right: 20px;

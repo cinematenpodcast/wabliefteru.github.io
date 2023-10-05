@@ -3952,6 +3952,10 @@ p {
   transform: scale(1.1);
 }
 
+.body-2 {
+  background-color: #13282e;
+}
+
 @media screen and (max-width: 991px) {
   .nav-link {
     margin-right: 20px;

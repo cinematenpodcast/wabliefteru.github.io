@@ -4026,6 +4026,10 @@ p {
     text-align: center;
   }
 
+  .section {
+    padding-bottom: 10px;
+  }
+
   .section.light {
     padding-top: 0;
   }
@@ -4039,6 +4043,7 @@ p {
   }
 
   .paragraph.personright {
+    text-align: left;
     align-items: center;
     display: inline;
     position: relative;
@@ -4088,8 +4093,10 @@ p {
   }
 
   .portret.right {
-    max-width: 125px;
+    max-width: 130px;
+    text-align: left;
     order: 1;
+    padding-top: 10px;
     display: inline-block;
   }
 
@@ -4104,12 +4111,17 @@ p {
   .info {
     top: auto;
   }
+
+  .patreonlink {
+    transform: scale(.6);
+  }
 }
 
 @media screen and (max-width: 479px) {
   .nav-link {
     margin-right: 10px;
     padding: 0 5px;
+    font-size: 10px;
   }
 
   .nav-link.w--current {
@@ -4160,14 +4172,19 @@ p {
     display: flex;
   }
 
-  .section, .section.light {
+  .section {
+    padding-top: 0;
+    padding-bottom: 10px;
+  }
+
+  .section.light {
     padding-top: 0;
     padding-bottom: 0;
   }
 
   .paragraph {
     padding-bottom: 10px;
-    font-size: 18px;
+    font-size: 13px;
   }
 
   .paragraph.waar {
@@ -4178,7 +4195,7 @@ p {
   .paragraph.personright {
     float: none;
     clear: none;
-    text-align: right;
+    text-align: left;
     margin-right: 0;
     padding-top: 10px;
     display: block;
@@ -4350,6 +4367,16 @@ p {
 
   .text-field.message {
     padding-top: 10px;
+  }
+
+  .patreonlink {
+    justify-content: center;
+    display: flex;
+    transform: scale(.6);
+  }
+
+  .image-10 {
+    display: inline-block;
   }
 }
 

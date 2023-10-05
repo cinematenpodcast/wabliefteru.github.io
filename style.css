@@ -3916,8 +3916,10 @@ p {
 }
 
 .image-9 {
+  width: 800px;
+  height: 48.8672px;
   max-width: 30%;
-  min-width: 15px;
+  min-width: 15%;
 }
 
 @media screen and (max-width: 991px) {

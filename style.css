@@ -3363,12 +3363,17 @@ p {
   font-size: 18px;
   font-weight: 400;
   line-height: 1;
+  transition: transform .5s;
   display: inline-block;
   position: static;
   top: auto;
   bottom: 0%;
   left: 0%;
   right: auto;
+}
+
+.button:hover {
+  transform: scale(1.1);
 }
 
 .button.addtocart {
@@ -3620,6 +3625,11 @@ p {
 
 .link-block {
   cursor: pointer;
+  transition: transform .5s;
+}
+
+.link-block:hover {
+  transform: scale(1.2);
 }
 
 .person-div {

@@ -3915,6 +3915,11 @@ p {
   max-width: 120px;
 }
 
+.image-9 {
+  max-width: 30%;
+  min-width: 15px;
+}
+
 @media screen and (max-width: 991px) {
   .nav-link {
     margin-right: 20px;

@@ -3934,8 +3934,10 @@ p {
 
 .patreonlink {
   transform-style: preserve-3d;
+  justify-content: center;
   transition: transform .5s;
-  transform: translate(-111px)scale(.6);
+  display: flex;
+  transform: scale(.6);
 }
 
 .patreonlink:hover {

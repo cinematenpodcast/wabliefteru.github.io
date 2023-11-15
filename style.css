@@ -3435,9 +3435,9 @@ p {
 }
 
 .section.imagebanner {
-  height: 500px;
+  height: 800px;
   background-image: url("https://assets-global.website-files.com/64a71ac46922dc7097d38929/654646c34278e4f6d51dc18c_groep.jpg");
-  background-position: 0 -100px;
+  background-position: 0 -150px;
   background-size: cover;
 }
 
@@ -3750,7 +3750,7 @@ p {
 }
 
 .div-block-3 {
-  padding-bottom: 20px;
+  padding-bottom: 49px;
 }
 
 .filler {

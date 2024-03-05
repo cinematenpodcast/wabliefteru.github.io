@@ -3407,12 +3407,11 @@ p {
 }
 
 .header {
-  background-image: url("https://assets-global.website-files.com/65e610e27054ec5aa7026aac/65e610e27054ec5aa7026ac8_Background%20snow.jpg");
+  background-image: url("https://wabliefteru.s3.amazonaws.com/Wabliefteru_website/images/Background.png");
   background-repeat: repeat-y;
   background-size: cover;
   background-attachment: scroll;
-  margin-bottom: 0;
-  padding-bottom: 0;
+  padding-bottom: 50px;
   overflow: visible;
 }
 
@@ -3841,10 +3840,6 @@ p {
 
 .success-message {
   background-color: rgba(0, 0, 0, 0);
-}
-
-.div-block-3 {
-  padding-bottom: 0;
 }
 
 .filler {
@@ -4616,6 +4611,7 @@ p {
   #w-node-df9f1cf1-c09f-e2da-1a78-29f3382eb29e-a7026aa0, #w-node-df9f1cf1-c09f-e2da-1a78-29f3382eb29e-a7026aaa {
     grid-area: span 1 / span 1 / span 1 / span 1;
   }
+
 }
 
 
@@ -4631,9 +4627,12 @@ p {
   }
 }
 
-.livestream {
-  width: 100%;
-  height: 75vh;
+.livestream-div {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 50px;
 }
 
 .livestream-iframe {
@@ -4643,4 +4642,41 @@ p {
   height: calc(56.25vw / 2); 
   max-height: calc(100vh / 2); 
   pointer-events: none;
+}
+
+.chatbox {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+.chatbox-iframe {
+  border: none;
+  width: calc(100vw / 2); 
+  height: calc(56.25vw / 3); 
+  max-height: calc(100vh / 2); 
+}
+
+@media only screen and (max-width: 768px) {
+  .livestream-iframe {
+      width: 90vw;
+      height: calc(56.25vw * 0.90);
+      max-height: 75vh;
+  }
+  .livestream-div {
+  margin-top: 30px;
+  margin-bottom: 0;
+  }
+  .chatbox {
+ padding-top: 10px;
+margin-bottom: 0;
+    }
+
+  .chatbox-iframe {
+    width: 100%;
+    height: 500px;
+    margin: 25px;
+}
 }

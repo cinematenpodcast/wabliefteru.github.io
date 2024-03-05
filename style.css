@@ -408,6 +408,7 @@ h3 {
   margin-top: 20px;
   font-size: 24px;
   line-height: 30px;
+
 }
 
 h4 {
@@ -4696,4 +4697,37 @@ line-break: auto;
 
 .div-block-3.home {
   padding-bottom: 50px;
+}
+
+.passwordbalk {
+  background-color: #1f3338;
+  padding: 10px;
+  width: 200px;
+  color: white;
+  margin: 0 auto; /* Center horizontally */
+}
+
+.wachtwoordinfo {
+  width: 350px;
+  text-align: center; /* Center text */
+  margin: 0 auto; /* Center horizontally */
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.wachtwoordinfo a {
+  color: inherit; /* Link color same as surrounding text */
+  text-decoration: none; /* Remove underline */
+}
+
+.wachtwoordinfo a:hover {
+  text-decoration: underline; /* Add underline on hover if needed */
+}
+
+.autoplay {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center; /* Center vertically */
 }

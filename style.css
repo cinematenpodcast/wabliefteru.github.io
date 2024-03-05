@@ -4065,6 +4065,10 @@ p {
   margin-bottom: 60px;
 }
 
+.heading-3.livestream {
+line-break: auto;
+}
+
 .chatbox {
   align-self: stretch;
   margin-top: 0;
@@ -4679,4 +4683,14 @@ margin-bottom: 0;
     height: 500px;
     margin: 25px;
 }
+
+.div-block-3.livestream {
+  margin-left: 50px;
+  margin-right: 50px;
+  }
+
+.header {
+  padding-bottom: 10px;
+}
+
 }

@@ -57,7 +57,30 @@
     <section id="Over-ons" class="section bovenste">
 
             <div class="livestream-div">
-                <iframe class="livestream-iframe" src="https://www.youtube-nocookie.com/embed/jfKfPfyJRdk?si=31iLmB9pQnJwTmss&mute=1&controls=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                
+                <div class="autoplay">
+                    <input id="password" placeholder="Enter the password">
+                  </div>                  
+                <script>
+                    const passwordForm = document.querySelector(".autoplay");
+                    const passwordInput = document.querySelector("#password");
+                  
+                    passwordInput.addEventListener("keypress", (e) => {
+                      if (e.key === 'Enter') { // Check if the Enter key is pressed
+                        const id = "jfKfPfyJRdk"; // Replace "YOUR_YOUTUBE_VIDEO_ID" with your actual YouTube video ID
+                        passwordForm.remove();
+                  
+                        let iframe = document.createElement('iframe');
+                        iframe.setAttribute('src', `https://www.youtube-nocookie.com/embed/${id}?si=31iLmB9pQnJwTmss&controls=0&rel=0&autoplay=1&showinfo=0`);
+                        iframe.setAttribute('frameborder', '0');
+                        iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+                        iframe.setAttribute('allowfullscreen', '');
+                        iframe.setAttribute('width', '1280');
+                        iframe.setAttribute('height', '620');
+                        document.querySelector('.autoplay').appendChild(iframe);
+                      }
+                    });
+                  </script>
+                <!--iframe class="livestream-iframe" src="https://www.youtube-nocookie.com/embed/jfKfPfyJRdk?si=31iLmB9pQnJwTmss&mute=1&controls=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe-->                
             <!--iframe class="livestream-iframe" src="https://www.youtube-nocookie.com/embed/sI68D0EWu80?si=j2fRWrXGyiwscrYL&controls=0&autoplay=1&mute=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe-->
 <!--iframe allow="autoplay;fullscreen;picture-in-picture;" src="https://vdo.ninja/?scene&room=Wabliefteru_150&mono&s&cleanoutput&transparent&cleanviewer&controls=true" class="livestream" style="width: 100%; height: 75vh; border: none;overflow: hidden;"></iframe> -->
             </div>

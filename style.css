@@ -3411,8 +3411,8 @@ p {
   background-repeat: repeat-y;
   background-size: cover;
   background-attachment: scroll;
-  padding-bottom: 50px;
   overflow: visible;
+  padding-bottom: 10px;
 }
 
 .nav-link {
@@ -4166,9 +4166,7 @@ line-break: auto;
 }
 
 @media screen and (max-width: 767px) {
-  .header {
-    padding-bottom: 20px;
-  }
+
 
   .nav-link {
     padding-top: 15px;
@@ -4653,44 +4651,49 @@ line-break: auto;
   justify-content: center;
   position: relative;
   overflow: hidden;
-  margin-bottom: 50px;
+  padding-bottom: 30px;
+  margin-bottom: 0px;
 }
 
 .chatbox-iframe {
   border: none;
   width: calc(100vw / 2); 
-  height: calc(56.25vw / 3); 
-  max-height: calc(100vh / 2); 
+  height: 600px;
 }
 
 @media only screen and (max-width: 768px) {
-  .livestream-iframe {
-      width: 90vw;
-      height: calc(56.25vw * 0.90);
-      max-height: 75vh;
+
+ .livestream-iframe {
+    width: 90vw;
+    height: calc(56.25vw * 0.90);
+    max-height: 75vh;
   }
+
   .livestream-div {
-  margin-top: 30px;
-  margin-bottom: 0;
+    margin-top: 30px;
+    margin-bottom: 0;
   }
   .chatbox {
- padding-top: 10px;
-margin-bottom: 0;
-    }
+    padding-top: 10px;
+    margin-bottom: 0;
+  }
 
   .chatbox-iframe {
     width: 100%;
     height: 500px;
     margin: 25px;
-}
-
-.div-block-3.livestream {
-  margin-left: 50px;
-  margin-right: 50px;
   }
 
-.header {
-  padding-bottom: 10px;
+  .div-block-3.livestream {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .header {
+    padding-bottom: 10px;
+  }
 }
 
+.div-block-3.home {
+  padding-bottom: 50px;
 }

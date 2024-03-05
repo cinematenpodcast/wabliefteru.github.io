@@ -56,11 +56,34 @@
     </section>
     <section id="Over-ons" class="section bovenste">
 
-            <div class="livestream-div">     
-            <iframe class="livestream-iframe" src="https://www.youtube-nocookie.com/embed/jfKfPfyJRdk?si=31iLmB9pQnJwTmss&mute=1&controls=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                
+            <div class="livestream-div">
+                <div class="autoplay">
+                    <input id="password" placeholder="Enter the password">
+                  </div>                  
+                <!--iframe class="livestream-iframe" src="https://www.youtube-nocookie.com/embed/jfKfPfyJRdk?si=31iLmB9pQnJwTmss&mute=1&controls=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe-->                
             <!--iframe class="livestream-iframe" src="https://www.youtube-nocookie.com/embed/sI68D0EWu80?si=j2fRWrXGyiwscrYL&controls=0&autoplay=1&mute=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe-->
 <!--iframe allow="autoplay;fullscreen;picture-in-picture;" src="https://vdo.ninja/?scene&room=Wabliefteru_150&mono&s&cleanoutput&transparent&cleanviewer&controls=true" class="livestream" style="width: 100%; height: 75vh; border: none;overflow: hidden;"></iframe> -->
             </div>
+            <script>
+                const passwordForm = document.querySelector(".autoplay");
+                const passwordInput = document.querySelector("#password");
+                const livestreamDiv = document.querySelector(".livestream-div"); // Select the .livestream-div
+            
+                passwordInput.addEventListener("keypress", (e) => {
+                  if (e.key === 'Enter') { // Check if the Enter key is pressed
+                    const id = "jfKfPfyJRdk"; // Replace with your actual YouTube video ID
+                    passwordForm.remove();
+            
+                    let iframe = document.createElement('iframe');
+                    iframe.setAttribute('src', `https://www.youtube.com/embed/${id}?autoplay=1&rel=0&controls=0&showinfo=0`);
+                    iframe.setAttribute('frameborder', '0');
+                    iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+                    iframe.setAttribute('allowfullscreen', '');
+                    iframe.classList.add('livestream-iframe');
+                    livestreamDiv.appendChild(iframe); // Append the iframe to the .livestream-div
+                  }
+                });
+            </script>            
     </section>
     <section id="Contact" class="section light">
             <div class="chatbox">

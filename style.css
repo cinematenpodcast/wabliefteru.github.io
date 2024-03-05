@@ -4636,7 +4636,11 @@ p {
   height: 75vh;
 }
 
-iframe {
+.livestream-iframe {
   border: none;
   overflow: hidden; /* This ensures that no scrollbars appear */
+  width: calc(100vw / 2); 
+  height: calc(56.25vw / 2); 
+  max-height: calc(100vh / 2); 
+  pointer-events: none;
 }

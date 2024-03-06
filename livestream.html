@@ -62,7 +62,7 @@
                         <h2 class='wachtwoordinfo'>Het wachtwoord voor deze stream kan je vinden op de <a href="https://www.patreon.com/wabliefteru" target="_blank">Patreon pagina</a>.</h2>
                     <input id="password" placeholder="Wat is het wachtwoord?" class="passwordbalk">
                   </div>                  
-            </div>
+                </div>
             <script>
                 const passwordForm = document.querySelector(".autoplay");
                 const passwordInput = document.querySelector("#password");
@@ -85,7 +85,7 @@
             
                 passwordInput.addEventListener("keypress",async  (e) => {
                   if (e.key === 'Enter') { // Check if the Enter key is pressed
-                    const id = "sI68D0EWu80"; // Replace with your actual YouTube video ID
+                    const id = "sI68D0EWu80"; // Replace with your actual YouTube video ID  sI68D0EWu80 lowfi: jfKfPfyJRdk
                     passwordForm.remove();
 
                     try {
@@ -107,17 +107,19 @@
                     iframe.setAttribute('allowfullscreen', '');
                     iframe.classList.add('livestream-iframe');
                     livestreamDiv.appendChild(iframe); // Append the iframe to the .livestream-div
+
+
+                    let chatbox = document.createElement('iframe');
+                    chatbox.setAttribute('src', `https://www.youtube.com/live_chat?v=cMqT5my2HgA&embed_domain=wabliefteru.be`);
+                    chatbox.setAttribute('frameborder', '0');
+                    chatbox.classList.add('chatbox-iframe');
+                    livestreamDiv.appendChild(chatbox); // Append the iframe to the .livestream-div
+
                   }
                 });
-            </script>            
+            </script>
+        </div>            
     </section>
-    <section id="Contact" class="section light">
-            <div class="chatbox">
-                <iframe class="chatbox-iframe" src="https://www.youtube.com/live_chat?v=cMqT5my2HgA&embed_domain=wabliefteru.be"></iframe>
-            </div>
-    </section>
-
-
     <section class="footer" id="Footer">
         <div class="w-layout-blockcontainer socials w-container" id="Socials">
             <div class="div-hero socmed-div">

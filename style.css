@@ -4632,10 +4632,13 @@ line-break: auto;
 
 .livestream-div {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   position: relative;
   overflow: hidden;
   margin-bottom: 50px;
+  margin: 22px;
+  gap: 30px;
 }
 
 .livestream-iframe {
@@ -4657,8 +4660,8 @@ line-break: auto;
 
 .chatbox-iframe {
   border: none;
-  width: calc(100vw / 1.2); 
-  height: 600px;
+  width: 500px; 
+  height: calc(56.25vw / 1.2); 
 }
 
 @media only screen and (max-width: 768px) {
@@ -4671,7 +4674,9 @@ line-break: auto;
 
   .livestream-div {
     margin-top: 30px;
+    flex-direction: column;
     margin-bottom: 0;
+    gap: 10px;
   }
   .chatbox {
     padding-top: 10px;

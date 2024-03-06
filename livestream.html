@@ -67,12 +67,39 @@
                 const passwordForm = document.querySelector(".autoplay");
                 const passwordInput = document.querySelector("#password");
                 const livestreamDiv = document.querySelector(".livestream-div"); // Select the .livestream-div
+
+                async function sha256(message) {
+                    // encode as UTF-8
+                    const msgBuffer = new TextEncoder().encode(message);                    
+
+                    // hash the message
+                    const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+
+                    // convert ArrayBuffer to Array
+                    const hashArray = Array.from(new Uint8Array(hashBuffer));
+
+                    // convert bytes to hex string                  
+                    const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+                    return hashHex;
+                }
             
-                passwordInput.addEventListener("keypress", (e) => {
+                passwordInput.addEventListener("keypress",async  (e) => {
                   if (e.key === 'Enter') { // Check if the Enter key is pressed
                     const id = "nif7-fGMSAs"; // Replace with your actual YouTube video ID
                     passwordForm.remove();
-            
+
+                    try {
+                        const pwHash = 'f7a537e4917f25a6896aa8105e3797e57a1b966c215a6d02fc5a94fd87ca5f4e';
+                        const passwordValue = passwordInput.value;
+                        const hashedPW = await sha256(passwordValue);
+
+                        if(!passwordValue || pwHash !== hashedPW){
+                            return;
+                        }
+                    } catch (e){
+                        return;
+                    }
+
                     let iframe = document.createElement('iframe');
                     iframe.setAttribute('src', `https://www.youtube.com/embed/${id}?autoplay=1&rel=0&controls=0&showinfo=0`);
                     iframe.setAttribute('frameborder', '0');

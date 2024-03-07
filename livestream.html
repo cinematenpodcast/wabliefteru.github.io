@@ -59,11 +59,12 @@
             <div class="livestream-div">
                 <div class="autoplay">
                     <div class="autoplay">
-                        <h2 class='wachtwoordinfo'>Het wachtwoord voor deze stream kan je vinden op de <a href="https://www.patreon.com/wabliefteru" target="_blank">Patreon pagina</a>.</h2>
-                    <input id="password" placeholder="Wat is het wachtwoord?" class="passwordbalk">
+                        <h2 class='wachtwoordinfo'>Er is momenteel geen livestream.</h2>
+                       <!--  <h2 class='wachtwoordinfo'>Het wachtwoord voor deze stream kan je vinden op de <a href="https://www.patreon.com/wabliefteru" target="_blank">Patreon pagina</a>.</h2>
+                        <input id="password" placeholder="Wat is het wachtwoord?" class="passwordbalk"> -->
                   </div>                  
                 </div>
-                <script>
+                <!-- <script>
                     const passwordForm = document.querySelector(".autoplay");
                     const passwordInput = document.querySelector("#password");
                     const livestreamDiv = document.querySelector(".livestream-div"); // Select the .livestream-div
@@ -100,8 +101,14 @@
                             } catch (e) {
                                 return;
                             }
-                
-                            let iframe = document.createElement('iframe');
+
+/*                             let h2 = document.createElement('h2');
+                            h2.classList.add('geenlivestream');
+                            h2.textContent = 'Er is momenteel geen livestream.';
+                            livestreamDiv.appendChild(h2); */
+
+
+/*                             let iframe = document.createElement('iframe');
                             iframe.setAttribute('src', `https://www.youtube.com/embed/${id}?autoplay=1&rel=0&controls=0&showinfo=0`);
                             iframe.setAttribute('frameborder', '0');
                             iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
@@ -114,7 +121,7 @@
                             chatbox.setAttribute('src', `https://www.youtube.com/live_chat?v=cMqT5my2HgA&embed_domain=wabliefteru.be`);
                             chatbox.setAttribute('frameborder', '0');
                             chatbox.classList.add('chatbox-iframe');
-                            livestreamDiv.appendChild(chatbox); // Append the iframe to the .livestream-div
+                            livestreamDiv.appendChild(chatbox); // Append the iframe to the .livestream-div */
                 
                         }
                     });
@@ -129,7 +136,7 @@
                             window.location.href = 'https://patreon.com/wabliefteru';
                         });
                     }
-                </script>
+                </script> -->
     </section>
     <section class="footer" id="Footer">
         <div class="w-layout-blockcontainer socials w-container" id="Socials">

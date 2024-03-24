@@ -38,15 +38,15 @@
         type="image/x-icon" />
     <link href="https://wabliefteru.s3.amazonaws.com/Wabliefteru_website/images/webclip.png" rel="apple-touch-icon" />
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7M1T6XBZHQ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7M1T6XBZHQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'G-7M1T6XBZHQ');
-</script>
+        gtag('config', 'G-7M1T6XBZHQ');
+    </script>
 
 </head>
 
@@ -58,8 +58,9 @@
                         class="image-3" loading="lazy"
                         src="https://wabliefteru.s3.amazonaws.com/Wabliefteru_website/images/64a722b8474504c566a95ec1_Miclogo%20klein.png" /></a>
                 <nav class="nav-menu w-nav-menu" role="navigation"><a class="nav-link w-nav-link" href="#Banner">Over
-                        ons</a><a href="https://stemopons.be" class="nav-link w-nav-link">Stem op ons!</a><a class="nav-link w-nav-link" href="#Steun-ons">Steun ons</a><a
-                        class="nav-link w-nav-link" href="#Contact">Contact</a></nav>
+                        ons</a><a href="https://stemopons.be" class="nav-link w-nav-link">Stem op ons!</a><a
+                        class="nav-link w-nav-link" href="#Steun-ons">Steun ons</a><a class="nav-link w-nav-link"
+                        href="#Contact">Contact</a></nav>
             </div>
         </div>
         <div class="div-block-3 home">
@@ -83,6 +84,36 @@
                     Zillion discotheek tot bloederige bijlmoordenaars. <br /><br />Gestart in 2020, is 'Wabliefteru?'
                     uitgegroeid tot een wekelijkse bron van leerrijk plezier. <br />Kom lachen, leren en luisteren
                     naar Yorrick, Stephan, Maarten en Alexander!</p>
+<style>
+
+
+.spotify-embed {
+    display: flex;
+    justify-content: left;
+    margin-top: 40px
+}
+
+@media screen and (max-width: 767px){
+
+    iframe {
+    height: 100px;
+    width: 100%;
+    }
+
+    .spotify-embed {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px
+}
+
+}
+
+</style>
+                <div class="spotify-embed"><iframe style="border-radius:12px"
+                        src="https://open.spotify.com/embed/show/7163qoNT9QZ88uAKmIFk6C?utm_source=generator"
+                        width="100%" height="152" frameBorder="0" allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"></iframe></div>
             </div>
         </div>
     </section>
@@ -193,7 +224,8 @@
                             data-name="message" id="message-2" maxlength="5000" name="message"
                             placeholder="Je boodschap, vraag, compliment, suggestie, feedback, e.d..."
                             required=""></textarea><input class="button w-button" data-wait="Geduld aub..."
-                            type="submit" value="Verzend" /></form>
+                            type="submit" value="Verzend" />
+                    </form>
                     <div class="success-message w-form-done">
                         <div class="paragraph bedankt">Bedankt voor jouw boodschap!</div>
                     </div>

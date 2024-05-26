@@ -3384,6 +3384,10 @@ body {
   line-height: 20px;
 }
 
+.home {
+  background-image: url("./images/Background.png");
+}
+
 h1 {
   margin-top: 20px;
   margin-bottom: 10px;

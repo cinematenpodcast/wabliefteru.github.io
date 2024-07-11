@@ -3605,6 +3605,7 @@ p {
   align-self: stretch;
   margin-top: 0;
   margin-bottom: 40px;
+
 }
 
 .div-hero.socmed-div {
@@ -4663,4 +4664,35 @@ p {
   #w-node-df9f1cf1-c09f-e2da-1a78-29f3382eb29e-147f1a76, #w-node-df9f1cf1-c09f-e2da-1a78-29f3382eb29e-147f1a7f {
     grid-area: span 1 / span 1 / span 1 / span 1;
   }
+}
+
+.div-hero-ks {
+  align-self: stretch;
+  margin-top: 0;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between; /* Ensures space between left and right items */
+  align-items: flex-start; /* Aligns items to the top of the container */
+}
+
+.ksleft {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  align-self: flex-start; /* Aligns the ksleft div to the start (left) of the flex container */
+}
+
+.ksright {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  align-self: flex-end;
+  margin-left: auto; /* Aligns the ksleft div to the start (left) of the flex container */
+}
+
+.titel.ksright {
+  text-align: right;
+  order: -1;
+  align-self: flex-end;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 10px;
 }

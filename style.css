@@ -3386,6 +3386,12 @@ body {
 
 .home {
   background-image: url("./images/Background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  overflow: visible;
 }
 
 h1 {
@@ -3422,7 +3428,7 @@ p {
 }
 
 .header {
-  background-image: url("https://wabliefteru.s3.amazonaws.com/Wabliefteru_website/images/Background.png");
+  background-image: url("./images/Background.png");
   background-repeat: repeat-y;
   background-size: cover;
   background-attachment: scroll;

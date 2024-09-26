@@ -3550,9 +3550,9 @@ p {
 }
 
 .section.imagebanner {
-  height: 800px;
+  height: 1000px;
   background-image: url("./images/groep_3.jpg");
-  background-position: 0 -150px;
+  background-position: 0 -200px;
   background-size: cover;
 }
 

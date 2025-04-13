@@ -94,60 +94,37 @@ import '../styles/global.css';
         margin-bottom: 20px;
       }
       
-      /* Host sections width fix */
-      .container.w-container {
-        max-width: 1200px;
-        width: 90%;
-        margin: 0 auto;
-        padding-left: 15px;
-        padding-right: 15px;
+      /* Host profile sections */
+      #Yorrick .container,
+      #Stephan .container,
+      #Maarten .container,
+      #Alexander .container {
+        max-width: 1200px !important;
+        width: 90% !important;
+        padding-left: 30px !important;
+        padding-right: 30px !important;
       }
       
-      .person-div {
-        margin-top: 20px;
-        margin-bottom: 20px;
-        display: flex;
-        width: 100%;
-        max-width: 1000px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      
-      .person-div.personright {
-        text-align: right;
-        margin-top: 0;
-        margin-bottom: 0;
-        padding-bottom: 10px;
-        padding-left: 20px;
-        padding-right: 20px;
-      }
-      
+      .person-div.personright,
       .person-div.personleft {
-        padding-left: 20px;
-        padding-right: 20px;
-      }
-      
-      .paragraph.personright, .paragraph.personleft {
-        max-width: 75%;
-        padding: 0 20px;
-      }
-      
-      .portret {
-        max-width: 200px;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 20px 0 !important;
       }
       
       .portret.right {
-        float: right;
-        order: 1;
-        margin-left: 20px;
-        display: block;
-        max-width: 200px;
+        margin-left: 40px !important;
       }
       
       .portret.left {
-        float: left;
-        margin-right: 20px;
-        max-width: 200px;
+        margin-right: 40px !important;
+      }
+      
+      .paragraph.personright,
+      .paragraph.personleft {
+        max-width: 70% !important;
+        line-height: 1.6 !important;
+        padding: 10px 0 !important;
       }
     </style>
 	</head>
@@ -205,35 +182,35 @@ import '../styles/global.css';
       <img src="/images/IMG-20240926-WA0003.jpg" alt="Group of friends" style="width: 100%; height: auto;" />
     </section>
     <section class="section light" id="Yorrick">
-        <div class="w-layout-blockcontainer container w-container">
+        <div class="w-layout-blockcontainer container w-container" style="max-width: 1200px; width: 90%; padding: 0 30px;">
             <div class="div-hero wieheader"><a class="filler w-inline-block" href="#"></a>
                 <h1 class="titel wie">Wablieftewie?</h1>
             </div>
         </div>
-        <div class="w-layout-blockcontainer container w-container">
-            <div class="person-div personright yorrick w-clearfix"><img alt="" class="portret right" loading="lazy" src="../images/Yorrick.png" width="147" />
-                <p class="paragraph personright">Yorrickske heeft een fascinatie voor het onbekende.<br />Van duistere moordenaars tot sprankelende musicals, hij brengt altijd een verhaal met een draai die je zal verbazen. Zijn passie voor het ongewone maakt elke aflevering een intrigerend avontuur.</p>
+        <div class="w-layout-blockcontainer container w-container" style="max-width: 1200px; width: 90%; padding: 0 30px;">
+            <div class="person-div personright yorrick w-clearfix" style="width: 100%; padding: 20px 0;"><img alt="" class="portret right" loading="lazy" src="../images/Yorrick.png" width="147" style="margin-left: 40px;" />
+                <p class="paragraph personright" style="max-width: 70%; line-height: 1.6; padding: 10px 0;">Yorrickske heeft een fascinatie voor het onbekende.<br />Van duistere moordenaars tot sprankelende musicals, hij brengt altijd een verhaal met een draai die je zal verbazen. Zijn passie voor het ongewone maakt elke aflevering een intrigerend avontuur.</p>
             </div>
         </div>
     </section>
     <section class="section" id="Stephan">
-        <div class="w-layout-blockcontainer container w-container">
-            <div class="person-div personleft w-clearfix"><img alt="" class="portret left" loading="lazy" src="../images/Stephan.png" />
-                <p class="paragraph personleft">Technisch vernuftig en historisch onderlegd, Stephans onderwerpen zijn een fascinerende reis door tijd en technologie. Van het leven van Leonardo da Vinci tot de geheimen van de farmaceutica, hij weet altijd te boeien.</p>
+        <div class="w-layout-blockcontainer container w-container" style="max-width: 1200px; width: 90%; padding: 0 30px;">
+            <div class="person-div personleft w-clearfix" style="width: 100%; padding: 20px 0;"><img alt="" class="portret left" loading="lazy" src="../images/Stephan.png" style="margin-right: 40px;" />
+                <p class="paragraph personleft" style="max-width: 70%; line-height: 1.6; padding: 10px 0;">Technisch vernuftig en historisch onderlegd, Stephans onderwerpen zijn een fascinerende reis door tijd en technologie. Van het leven van Leonardo da Vinci tot de geheimen van de farmaceutica, hij weet altijd te boeien.</p>
             </div>
         </div>
     </section>
     <section class="section light" id="Maarten">
-        <div class="w-layout-blockcontainer container w-container">
-            <div class="person-div personright w-clearfix"><img alt="" class="portret right" loading="lazy" src="../images/Maarten.png" />
-                <p class="paragraph personright">Van psychologie tot Prinses Diana, Maartens onderwerpen zijn altijd vergezeld van een gezonde dosis humor. Zijn flauwe moppen zullen je laten lachen, maar zijn inzichten zullen je aan het denken zetten.</p>
+        <div class="w-layout-blockcontainer container w-container" style="max-width: 1200px; width: 90%; padding: 0 30px;">
+            <div class="person-div personright w-clearfix" style="width: 100%; padding: 20px 0;"><img alt="" class="portret right" loading="lazy" src="../images/Maarten.png" style="margin-left: 40px;" />
+                <p class="paragraph personright" style="max-width: 70%; line-height: 1.6; padding: 10px 0;">Van psychologie tot Prinses Diana, Maartens onderwerpen zijn altijd vergezeld van een gezonde dosis humor. Zijn flauwe moppen zullen je laten lachen, maar zijn inzichten zullen je aan het denken zetten.</p>
             </div>
         </div>
     </section>
     <section class="section" id="Alexander">
-        <div class="w-layout-blockcontainer container w-container">
-            <div class="person-div personleft w-clearfix"><img alt="" class="portret left" loading="lazy" src="../images/Alexander.png" />
-                <p class="paragraph personleft">Alexander, de gids van het gewone, verkent onderwerpen die dicht bij huis zijn, zoals sociale media tot bier of van vreemd eten tot het atomium. Alexander is de man die het gewone buitengewoon maakt.</p>
+        <div class="w-layout-blockcontainer container w-container" style="max-width: 1200px; width: 90%; padding: 0 30px;">
+            <div class="person-div personleft w-clearfix" style="width: 100%; padding: 20px 0;"><img alt="" class="portret left" loading="lazy" src="../images/Alexander.png" style="margin-right: 40px;" />
+                <p class="paragraph personleft" style="max-width: 70%; line-height: 1.6; padding: 10px 0;">Alexander, de gids van het gewone, verkent onderwerpen die dicht bij huis zijn, zoals sociale media tot bier of van vreemd eten tot het atomium. Alexander is de man die het gewone buitengewoon maakt.</p>
             </div>
         </div>
     </section>

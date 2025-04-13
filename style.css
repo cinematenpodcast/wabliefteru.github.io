@@ -3462,9 +3462,9 @@ p {
 }
 
 .image-3 {
-  max-width: 15%;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  max-width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .button {
@@ -4705,4 +4705,12 @@ p {
 
 #i0q3c {
   max-width: 75%;
+}
+
+.container-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 15px;
 }

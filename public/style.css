@@ -55,6 +55,11 @@
   color: #333;
   text-decoration: none;
   position: relative;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding: 0;
+  margin: 0;
 }
 
 .w-nav-link {
@@ -72,6 +77,11 @@
 .w-nav-menu {
   float: right;
   position: relative;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
@@ -155,9 +165,12 @@ p {
   font-family: Rubik, sans-serif;
   font-weight: 700;
   font-size: 16px;
-  padding: 10px 12px;
-  display: flex;
+  padding: 0 12px;
+  margin: 0;
+  display: inline-flex;
   align-items: center;
+  height: 60px;
+  line-height: 60px;
 }
 
 .nav-link.w--current {
@@ -168,6 +181,7 @@ p {
   background-color: var(--dark-green);
   display: flex;
   align-items: center;
+  padding: 0;
 }
 
 .hero-image {
@@ -182,11 +196,12 @@ p {
 
 .image-3 {
   max-width: 15%;
-  padding-top: 10px;
-  padding-bottom: 10px;
   height: 40px;
   width: auto;
   object-fit: contain;
+  margin: 0;
+  padding: 10px;
+  vertical-align: middle;
 }
 
 .button {
@@ -437,6 +452,7 @@ p {
     z-index: 1000;
     display: flex;
     align-items: center;
+    height: 60px;
   }
   
   .w-container {
@@ -450,15 +466,20 @@ p {
     float: right;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     width: auto;
     padding: 0;
+    margin: 0;
+    height: 60px;
   }
   
   .nav-link {
-    padding: 10px 10px;
+    padding: 0 10px;
     font-size: 16px;
-    display: flex;
+    display: inline-flex;
     align-items: center;
+    height: 60px;
+    line-height: 60px;
   }
   
   .w-nav-brand {
@@ -466,14 +487,16 @@ p {
     display: flex;
     align-items: center;
     width: auto;
+    height: 60px;
   }
   
   .image-3 {
     max-height: 40px;
     max-width: none;
     width: auto;
-    padding: 5px 0;
+    padding: 10px;
     margin: 0;
+    vertical-align: middle;
   }
   
   /* Header logo and button centering */
@@ -1152,6 +1175,7 @@ p {
     z-index: 1000;
     display: flex;
     align-items: center;
+    height: 60px;
   }
   
   .w-container {
@@ -1168,13 +1192,17 @@ p {
     align-items: center;
     width: auto;
     padding: 0;
+    margin: 0;
+    height: 60px;
   }
   
   .nav-link {
-    padding: 10px 10px;
+    padding: 0 10px;
     font-size: 16px;
-    display: flex;
+    display: inline-flex;
     align-items: center;
+    height: 60px;
+    line-height: 60px;
   }
   
   .w-nav-brand {
@@ -1182,14 +1210,16 @@ p {
     display: flex;
     align-items: center;
     width: auto;
+    height: 60px;
   }
   
   .image-3 {
     max-height: 40px;
     max-width: none;
     width: auto;
-    padding: 5px 0;
+    padding: 10px;
     margin: 0;
+    vertical-align: middle;
   }
   
   /* Header logo and button centering */

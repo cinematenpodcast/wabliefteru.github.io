@@ -42,12 +42,178 @@ import '../styles/global.css';
     <style>
       /* Removed background image styles */
       
+      /* Fix for mobile view right margin/padding */
+      body {
+        overflow-x: hidden;
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      
+      html {
+        overflow-x: hidden;
+        width: 100%;
+      }
+      
       /* Responsive styles */
       @media (max-width: 767px) {
         /* Adjust responsive container for mobile */
         .spotify-embed iframe {
           width: 100%;
           max-width: 100%;
+        }
+        
+        .section, .container, .w-container {
+          width: 100% !important;
+          max-width: 100% !important;
+          box-sizing: border-box;
+          margin-left: 0 !important;
+          margin-right: 0 !important;
+          padding-left: 15px !important;
+          padding-right: 15px !important;
+          overflow-x: hidden;
+        }
+        
+        /* Remove padding specifically for the imagebanner section */
+        .section.imagebanner {
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+        }
+        
+        /* Also remove padding from the div inside imagebanner to ensure full width image */
+        .section.imagebanner > div {
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+        }
+        
+        /* Override the general section padding specifically for person sections */
+        .section#Yorrick, 
+        .section#Stephan, 
+        .section#Maarten, 
+        .section#Alexander {
+          width: 100% !important;
+          max-width: 100% !important;
+        }
+        
+        /* Comprehensive styling for person sections to match Steun-ons */
+        
+        #Yorrick .container,
+        #Stephan .container,
+        #Maarten .container,
+        #Alexander .container {
+          width: 90% !important; /* Match the Steun-ons width */
+          max-width: none !important;
+          margin: 0 auto !important;
+          padding: 0 !important;
+          box-sizing: border-box;
+        }
+        
+        .person-div.personright,
+        .person-div.personleft {
+          display: flex !important;
+          flex-direction: column !important;
+          align-items: center !important;
+          width: 100% !important;
+          margin: 0 !important;
+          padding: 0 !important;
+          box-sizing: border-box;
+          float: none !important;
+        }
+        
+        #Yorrick .paragraph.personright,
+        #Stephan .paragraph.personleft,
+        #Maarten .paragraph.personright,
+        #Alexander .paragraph.personleft {
+          width: 100% !important;
+          max-width: none !important;
+          text-align: center !important;
+          box-sizing: border-box;
+          float: none !important;
+          line-height: 1.6 !important;
+        }
+        
+        /* Center portrait images on mobile - specific overrides */
+        .portret.right,
+        .portret.left {
+          float: none !important;
+          margin: 0 auto 20px !important; /* Override any left/right margins */
+          margin-left: auto !important; /* Explicitly override portret.right margin-left */
+          margin-right: auto !important; /* Explicitly override portret.left margin-right */
+          display: block !important;
+          max-width: 147px !important;
+        }
+        
+        /* Additional style to fix any centering issues on the container level */
+        .person-div.personright,
+        .person-div.personleft {
+          text-align: center !important;
+        }
+        
+        /* Responsive title sizes for mobile */
+        .titel.wat,
+        .titel.wie,
+        .titel.waar {
+          font-size: 26px !important;
+          line-height: 32px !important;
+        }
+        
+        /* Even smaller for very small screens */
+        @media (max-width: 350px) {
+          .titel.wat,
+          .titel.wie,
+          .titel.waar {
+            font-size: 22px !important;
+            line-height: 28px !important;
+          }
+        }
+        
+        /* Force a clean 4-3 split for podcast platform icons */
+        .w-layout-grid.grid {
+          display: block !important;
+          width: 100% !important;
+          padding: 0 10px !important;
+          text-align: center !important;
+        }
+        
+        /* Create a flex container for the first 4 items */
+        .w-layout-grid.grid::before {
+          content: "" !important;
+          display: flex !important;
+          justify-content: space-between !important;
+          margin-bottom: 15px !important;
+        }
+        
+        /* Put the first 4 elements in the flex container */
+        .w-layout-grid.grid .link-block:nth-child(-n+4) {
+          display: inline-block !important;
+          width: 22% !important;
+          margin: 0 1% !important;
+          margin-bottom: 20px !important; /* Add space between rows */
+        }
+        
+        /* Make a second flex container for the last 3 elements */
+        .w-layout-grid.grid::after {
+          content: "" !important;
+          display: flex !important;
+          justify-content: center !important;
+          gap: 10% !important;
+          margin-top: 20px !important; /* Add space between rows */
+        }
+        
+        /* Put the last 3 elements in the second container */
+        .w-layout-grid.grid .link-block:nth-child(n+5) {
+          display: inline-block !important;
+          width: 22% !important;
+          margin: 0 2% !important;
+          margin-top: 20px !important; /* Add space between rows */
+        }
+        
+        /* Make title smaller to fit on one line */
+        #Waar-luisteren .titel.waar {
+          font-size: 22px !important;
+          line-height: 28px !important;
+          white-space: nowrap !important;
         }
       }
       
@@ -64,34 +230,87 @@ import '../styles/global.css';
         width: 100%;
         padding: 10px 15px;
         position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
       }
       
       .brand.w-nav-brand {
-        position: absolute;
-        left: 20px;
-        top: 50%;
-        transform: translateY(-50%);
+        position: relative;
+        left: 0;
+        padding: 8px 20px;
+        display: flex;
+        align-items: center;
+        flex: 0 0 auto;
       }
       
       .image-3 {
         max-width: 150px;
-        padding: 5px 0;
+        max-height: 44px;
+        width: auto;
+        height: auto;
         display: block;
+        object-fit: contain;
       }
       
       .nav-menu.w-nav-menu {
-        position: absolute;
-        right: 20px;
-        top: 50%;
-        transform: translateY(-50%);
+        position: relative;
         display: flex;
         justify-content: flex-end;
+        align-items: center;
         background: none;
         float: none;
+        gap: 10px;
+        margin-left: auto;
+        padding-right: 20px;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+      }
+      
+      .nav-link.w-nav-link {
+        white-space: nowrap;
+        padding: 0 10px;
+      }
+      
+      /* Responsive styles for smaller screens */
+      @media (max-width: 767px) {
+        .nav-link.w-nav-link {
+          font-size: 16px;
+          padding: 0 8px;
+        }
+        
+        .nav-menu.w-nav-menu {
+          gap: 10px;
+          padding-right: 10px;
+        }
+        
+        .brand.w-nav-brand {
+          padding: 8px 10px;
+        }
+        
+        .image-3 {
+          max-width: 110px;
+          max-height: 36px;
+        }
+      }
+      
+      /* Even smaller screens */
+      @media (max-width: 479px) {
+        .nav-link.w-nav-link {
+          font-size: 15px;
+          padding: 0 5px;
+        }
+        
+        .nav-menu.w-nav-menu {
+          gap: 5px;
+        }
+        
+        .image-3 {
+          max-width: 90px;
+        }
       }
       
       .paragraph {
-        margin-bottom: 20px;
+        margin-bottom: Opx;
       }
       
       /* Host profile sections */
@@ -101,8 +320,8 @@ import '../styles/global.css';
       #Alexander .container {
         max-width: 940px !important;
         width: 90% !important;
-        padding-left: 30px !important;
-        padding-right: 30px !important;
+        padding-left: 30px;
+        padding-right: 30px;
       }
       
       .person-div.personright,
@@ -113,11 +332,11 @@ import '../styles/global.css';
       }
       
       .portret.right {
-        margin-left: 40px !important;
+        margin-left: 40px;
       }
       
       .portret.left {
-        margin-right: 40px !important;
+        margin-right: 40px;
       }
       
       .paragraph.personright,
@@ -178,8 +397,10 @@ import '../styles/global.css';
             </div>
         </div>
     </section>
-    <section class="section imagebanner" data-w-id="f37c160c-ea31-663d-1348-5770d76fe005" id="Banner" style="height: auto; background: none;">
-      <img src="/images/IMG-20240926-WA0003.jpg" alt="Group of friends" style="width: 100%; height: auto;" />
+    <section class="section imagebanner" data-w-id="f37c160c-ea31-663d-1348-5770d76fe005" id="Banner" style="height: auto; background: none; display: block; line-height: 0; overflow: hidden;">
+      <div style="height: 0; padding-bottom: 50%; position: relative; overflow: hidden;">
+        <img src="/images/IMG-20240926-WA0003.jpg" alt="Group of friends" style="width: 100%; object-fit: cover; object-position: top; position: absolute; top: 0; left: 0; height: 100%;" />
+      </div>
     </section>
     <section class="section light" id="Yorrick">
         <div class="w-layout-blockcontainer container w-container" style="max-width: 940px; width: 90%; padding: 0 30px;">
@@ -189,7 +410,7 @@ import '../styles/global.css';
         </div>
         <div class="w-layout-blockcontainer container w-container" style="max-width: 940px; width: 90%; padding: 0 30px;">
             <div class="person-div personright yorrick w-clearfix" style="width: 100%; padding: 20px 0;"><img alt="" class="portret right" loading="lazy" src="../images/Yorrick.png" width="147" style="margin-left: 40px;" />
-                <p class="paragraph personright" style="max-width: 70%; line-height: 1.6; padding: 10px 0;">Yorrickske heeft een fascinatie voor het onbekende.<br />Van duistere moordenaars tot sprankelende musicals, hij brengt altijd een verhaal met een draai die je zal verbazen. Zijn passie voor het ongewone maakt elke aflevering een intrigerend avontuur.</p>
+                <p class="paragraph personright" style="max-width: 70%; line-height: 1.6; padding: 10px 0;">Yorrickske heeft een fascinatie voor het onbekende. Van duistere moordenaars tot sprankelende musicals, hij brengt altijd een verhaal met een draai die je zal verbazen. Zijn passie voor het ongewone maakt elke aflevering een intrigerend avontuur.</p>
             </div>
         </div>
     </section>

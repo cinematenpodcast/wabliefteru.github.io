@@ -4777,58 +4777,35 @@ p {
   float: none;
 }
 
-/* Host sections width fix */
-.container.w-container {
+/* Host profile section adjustments */
+.section#Yorrick .container,
+.section#Stephan .container,
+.section#Maarten .container,
+.section#Alexander .container {
   max-width: 1200px;
   width: 90%;
-  margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
-.person-div {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  display: flex;
-  width: 100%;
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.person-div.personright {
-  text-align: right;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
+.person-div.personright,
 .person-div.personleft {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.paragraph.personright, .paragraph.personleft {
-  max-width: 75%;
-  padding: 0 20px;
-}
-
-.portret {
-  max-width: 200px;
+  width: 100%;
+  margin: 0;
+  padding: 20px 0;
 }
 
 .portret.right {
-  float: right;
-  order: 1;
-  margin-left: 20px;
-  display: block;
-  max-width: 200px;
+  margin-left: 40px;
 }
 
 .portret.left {
-  float: left;
-  margin-right: 20px;
-  max-width: 200px;
+  margin-right: 40px;
+}
+
+.paragraph.personright,
+.paragraph.personleft {
+  max-width: 70%;
+  line-height: 1.6;
+  padding: 10px 0;
 }

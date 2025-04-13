@@ -160,29 +160,12 @@ p {
   overflow: visible;
 }
 
-.nav-link {
-  color: var(--light-green);
-  font-family: Rubik, sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  padding: 0 12px;
-  margin: 0;
-  display: inline-flex;
-  align-items: center;
-  height: 60px;
-  line-height: 60px;
-}
-
-.nav-link.w--current {
-  color: var(--light-green);
-}
-
 .navbar {
   background-color: var(--dark-green);
   display: flex;
   align-items: center;
-  padding: 10px 0;
-  min-height: 70px;
+  padding: 6px 0;
+  min-height: 60px;
 }
 
 .hero-image {
@@ -197,7 +180,7 @@ p {
 
 .image-3 {
   max-width: 15%;
-  height: 40px;
+  height: 38px;
   width: auto;
   object-fit: contain;
   margin: 0;
@@ -453,8 +436,8 @@ p {
     z-index: 1000;
     display: flex;
     align-items: center;
-    height: 70px;
-    padding: 10px 0;
+    height: 60px;
+    padding: 6px 0;
   }
   
   .w-container {
@@ -480,8 +463,8 @@ p {
     font-size: 16px;
     display: inline-flex;
     align-items: center;
-    height: 60px;
-    line-height: 60px;
+    height: 50px;
+    line-height: 50px;
   }
   
   .w-nav-brand {
@@ -493,7 +476,7 @@ p {
   }
   
   .image-3 {
-    max-height: 40px;
+    max-height: 38px;
     max-width: none;
     width: auto;
     padding: 5px 10px;
@@ -1177,8 +1160,8 @@ p {
     z-index: 1000;
     display: flex;
     align-items: center;
-    height: 70px;
-    padding: 10px 0;
+    height: 60px;
+    padding: 6px 0;
   }
   
   .w-container {
@@ -1204,8 +1187,8 @@ p {
     font-size: 16px;
     display: inline-flex;
     align-items: center;
-    height: 60px;
-    line-height: 60px;
+    height: 50px;
+    line-height: 50px;
   }
   
   .w-nav-brand {
@@ -1217,7 +1200,7 @@ p {
   }
   
   .image-3 {
-    max-height: 40px;
+    max-height: 38px;
     max-width: none;
     width: auto;
     padding: 5px 10px;
@@ -1541,5 +1524,22 @@ p {
     text-align: center;
     width: 100%;
   }
+}
+
+.nav-link {
+  color: var(--light-green);
+  font-family: Rubik, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 0 12px;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  height: 50px;
+  line-height: 50px;
+}
+
+.nav-link.w--current {
+  color: var(--light-green);
 }
 

@@ -178,6 +178,9 @@ p {
   max-width: 15%;
   padding-top: 10px;
   padding-bottom: 10px;
+  height: 20px;
+  width: auto;
+  object-fit: contain;
 }
 
 .button {
@@ -239,6 +242,7 @@ p {
   margin-top: 0;
   margin-bottom: 0;
   padding-top: 0;
+  padding-bottom: 0;
 }
 
 .section {
@@ -253,52 +257,97 @@ p {
   padding: 20px;
 }
 
-.section.bovenste {
-  padding: 20px;
+/* Host sections - adding vertical padding */
+.section#Yorrick, 
+.section#Stephan, 
+.section#Maarten, 
+.section#Alexander {
+  padding: 20px 0;
+  margin: 0;
 }
 
-.section.imagebanner {
-  height: auto;
-  background-image: none;
-  background-position: initial;
-  background-size: initial;
-  padding: 20px;
+#Yorrick .container, 
+#Stephan .container, 
+#Maarten .container, 
+#Alexander .container {
+  padding: 0;
+  margin: 0 auto;
+  max-width: 800px;
+  width: 90%;
 }
 
-.paragraph {
-  color: #fff;
-  text-align: left;
-  align-self: flex-start;
-  margin-bottom: 0;
-  font-family: Rubik, sans-serif;
-  font-size: 20px;
-  font-weight: 300;
-  line-height: 1.2;
+#Yorrick .div-hero, 
+#Stephan .div-hero, 
+#Maarten .div-hero, 
+#Alexander .div-hero {
+  margin: 0;
+  padding: 0;
+}
+
+.div-hero.wieheader {
+  margin: 0;
+  padding: 0;
+  text-align: center;
   display: flex;
+  justify-content: center;
 }
 
-.paragraph.waar {
-  text-align: right;
-  flex-direction: column;
-  margin-bottom: 20px;
+.titel.wie {
+  text-align: center;
+  margin: 0 0 15px 0;
+  padding: 5px 0;
+  width: 100%;
+  order: initial;
+  align-self: center;
+}
+
+.person-div {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .paragraph.personright {
   float: none;
   clear: none;
-  text-align: right;
-  flex: 0 auto;
+  text-align: left;
+  flex: 1;
   align-self: center;
-  margin-bottom: 0;
+  margin: 0;
+  padding: 0;
   display: block;
   position: static;
+  max-width: 500px;
 }
 
 .paragraph.personleft {
-  flex: 0 auto;
+  flex: 1;
   align-self: center;
-  margin-bottom: 0;
+  margin: 0;
+  padding: 0;
   display: block;
+  max-width: 500px;
+}
+
+.portret {
+  max-width: 250px;
+  width: auto;
+  height: auto;
+}
+
+.portret.right {
+  float: right;
+  order: 1;
+  margin-left: 20px;
+  display: block;
+}
+
+.portret.left {
+  float: left;
+  margin-right: 20px;
 }
 
 .container {
@@ -308,6 +357,37 @@ p {
   margin-top: 0;
   padding: 0 0 20px 0;
   display: flex;
+}
+
+/* Media query adjustments for cleaner host sections */
+@media (max-width: 767px) {
+  .person-div {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .portret {
+    max-width: 250px;
+    float: none;
+    margin: 0 0 15px 0;
+    display: block;
+  }
+  
+  .portret.right, .portret.left {
+    float: none;
+    order: 0;
+    margin: 0 0 15px 0;
+  }
+  
+  .paragraph.personright, .paragraph.personleft {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+  }
 }
 
 .div-hero {
@@ -324,10 +404,6 @@ p {
   background-color: var(--dark-green);
   padding: 10px;
   border: none;
-}
-
-.div-hero.wieheader {
-  margin-bottom: 0;
 }
 
 .div-hero.logo {
@@ -421,22 +497,6 @@ p {
   cursor: pointer;
 }
 
-.portret {
-  max-width: 200px;
-}
-
-.portret.right {
-  float: right;
-  order: 1;
-  margin-left: 20px;
-  display: block;
-}
-
-.portret.left {
-  float: left;
-  margin-right: 20px;
-}
-
 .link-block {
   cursor: pointer;
   transition: transform .5s;
@@ -444,12 +504,6 @@ p {
 
 .link-block:hover {
   transform: scale(1.2);
-}
-
-.person-div {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  display: flex;
 }
 
 .footer {
@@ -482,6 +536,7 @@ p {
   transition: transform .5s;
   display: flex;
   transform: scale(.6);
+  margin-top: 0;
 }
 
 .patreonlink:hover {
@@ -540,5 +595,446 @@ p {
 
 .nav-link:hover {
   color: #5cc187;
+}
+
+/* Responsive styles for mobile and tablet */
+@media (max-width: 991px) {
+  .container, .w-container {
+    max-width: 90%;
+  }
+  
+  .image-3 {
+    max-width: 12%;
+  }
+  
+  .image-4 {
+    max-width: 350px;
+  }
+  
+  .flex-block {
+    margin: 20px 50px;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+  }
+  
+  .w-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .nav-menu {
+    float: right;
+    display: flex;
+    justify-content: flex-end;
+    width: auto;
+    padding: 0;
+  }
+  
+  .nav-link {
+    padding: 10px 8px;
+    font-size: 14px;
+  }
+  
+  .w-nav-brand {
+    float: left;
+    display: flex;
+    align-items: center;
+    width: auto;
+  }
+  
+  .image-3 {
+    max-height: 24px;
+    max-width: none;
+    width: auto;
+    padding: 5px 0;
+    margin: 0;
+  }
+  
+  .image-4 {
+    max-width: 250px;
+  }
+  
+  .titel {
+    font-size: 32px;
+  }
+  
+  .titel.waar, .titel.wie, .titel.ksright {
+    text-align: center;
+    order: 0;
+  }
+  
+  .paragraph {
+    font-size: 16px;
+  }
+  
+  .paragraph.waar, .paragraph.personright {
+    text-align: center;
+  }
+  
+  .person-div {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .portret {
+    max-width: 150px;
+    float: none;
+    margin: 0 auto 20px;
+    display: block;
+  }
+  
+  .portret.right, .portret.left {
+    float: none;
+    order: 0;
+    margin: 0 auto 20px;
+  }
+  
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 20px;
+  }
+  
+  .button {
+    padding: 15px;
+    font-size: 16px;
+  }
+  
+  .flex-block {
+    margin: 20px 30px;
+  }
+  
+  .div-hero-ks {
+    flex-direction: column;
+  }
+  
+  .ksleft, .ksright {
+    margin: 20px 0;
+    align-self: center;
+  }
+
+  /* Nieuwe stijlen voor Waar-luisteren sectie op mobiel */
+  #Waar-luisteren .container {
+    padding: 0;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 90%;
+    text-align: center;
+    align-items: center;
+  }
+  
+  #Waar-luisteren .div-hero {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  
+  #Waar-luisteren .titel.waar {
+    text-align: center;
+    margin: 0 0 15px 0;
+    padding: 5px 0;
+    order: initial;
+    align-self: center;
+    width: 100%;
+  }
+  
+  #Waar-luisteren .paragraph.waar {
+    text-align: center;
+    margin: 0 0 20px 0;
+    flex-direction: column;
+    max-width: 100%;
+    display: block;
+  }
+  
+  #Waar-luisteren .grid {
+    justify-items: center;
+    margin: 0 auto;
+  }
+
+  /* Nieuwe stijlen voor Steun-ons sectie op mobiel */
+  #Steun-ons .container {
+    padding: 0;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 90%;
+    text-align: center;
+    align-items: center;
+  }
+  
+  #Steun-ons .div-hero {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  
+  #Steun-ons .titel {
+    text-align: center;
+    margin: 0 0 15px 0;
+    padding: 5px 0;
+    display: block;
+    width: 100%;
+  }
+  
+  #Steun-ons .paragraph {
+    text-align: center;
+    margin: 0 0 0 0;
+    max-width: 100%;
+    display: block;
+  }
+  
+  #Steun-ons .patreonlink {
+    margin: 0;
+  }
+
+  /* Nieuwe stijlen voor Over-ons sectie (Wablieftewat?) op mobiel */
+  #Over-ons .container {
+    padding: 0;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 90%;
+    text-align: center;
+    align-items: center;
+  }
+  
+  #Over-ons .div-hero {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  
+  #Over-ons .titel.wat {
+    text-align: center;
+    margin: 0 0 15px 0;
+    padding: 5px 0;
+    width: 100%;
+  }
+  
+  #Over-ons .paragraph {
+    text-align: center;
+    margin: 0 0 20px 0;
+    max-width: 100%;
+    display: block;
+  }
+  
+  #Over-ons .spotify-embed {
+    justify-content: center;
+    margin: 20px auto 0;
+  }
+
+  /* Improved Contact form centering on mobile */
+  #Contact .container {
+    padding: 0;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 90%;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #Contact .div-hero {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    align-self: center;
+  }
+  
+  #Contact .titel.wat {
+    text-align: center;
+    margin: 0 0 15px 0;
+    padding: 5px 0;
+    width: 100%;
+  }
+  
+  #Contact .w-form {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #Contact form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #Contact .text-field,
+  #Contact .text-field.message {
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+  }
+  
+  #Contact .button {
+    margin: 10px auto;
+    align-self: center;
+    float: none;
+    display: block;
+  }
+  
+  /* Footer centering styles for mobile */
+  .footer {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .footer .w-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .socials.w-container {
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .grid-2 {
+    justify-content: center;
+    width: auto;
+    margin: 0 auto;
+  }
+  
+  .copyright-footer.w-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .copyright {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 479px) {
+  .nav-link {
+    padding: 8px 5px;
+    font-size: 12px;
+  }
+  
+  .image-3 {
+    max-height: 20px;
+  }
+  
+  .image-4 {
+    max-width: 200px;
+  }
+  
+  .titel {
+    font-size: 28px;
+  }
+  
+  .paragraph {
+    font-size: 14px;
+  }
+  
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .grid-2 {
+    gap: 3px;
+  }
+  
+  .icon {
+    max-width: 30px;
+  }
+  
+  .socmedicon, .image-5, .image-6 {
+    max-width: 20px;
+  }
+  
+  .flex-block {
+    margin: 20px 15px;
+  }
+  
+  .text-field {
+    font-size: 16px;
+  }
+}
+
+.section.bovenste {
+  padding: 20px;
+}
+
+.section.imagebanner {
+  height: auto;
+  background-image: none;
+  background-position: initial;
+  background-size: initial;
+  padding: 20px;
+}
+
+.paragraph {
+  color: #fff;
+  text-align: left;
+  align-self: flex-start;
+  margin-bottom: 0;
+  font-family: Rubik, sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.2;
+  display: flex;
+}
+
+.paragraph.waar {
+  text-align: right;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.paragraph[data-astro-cid-j7pv25f6] {
+  margin-bottom: 0;
+}
+
+#Steun-ons .container,
+#Steun-ons .div-hero,
+#Steun-ons .titel,
+#Steun-ons .paragraph,
+#Steun-ons .patreonlink {
+  /* Remove the standalone centering rules */
 }
 

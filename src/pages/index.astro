@@ -41,6 +41,15 @@ import '../styles/global.css';
     </script>
     <style>
       /* Removed background image styles */
+      
+      /* Responsive styles */
+      @media (max-width: 767px) {
+        /* Adjust responsive container for mobile */
+        .spotify-embed iframe {
+          width: 100%;
+          max-width: 100%;
+        }
+      }
     </style>
 	</head>
 <body class="body-2">
@@ -66,17 +75,6 @@ import '../styles/global.css';
                     display: flex;
                     justify-content: left;
                     margin-top: 40px
-                }
-                @media screen and (max-width: 767px){
-                    iframe {
-                    height: 100px;
-                    width: 100%;
-                    }
-                    .spotify-embed {
-                    display: flex;
-                    justify-content: center;
-                    margin-top: 10px
-                }
                 }
                 .group-image {
                     width: 100vw;

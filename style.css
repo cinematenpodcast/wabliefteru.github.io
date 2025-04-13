@@ -4713,16 +4713,27 @@ p {
   align-items: center;
   width: 100%;
   padding: 10px 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.brand.w-nav-brand {
+  float: left;
+  display: inline-block;
+  margin-right: auto;
 }
 
 .image-3 {
   max-width: 150px;
   padding-top: 5px;
   padding-bottom: 5px;
+  display: block;
 }
 
 .nav-menu {
+  float: right;
   display: flex;
   justify-content: flex-end;
   width: auto;
+  margin-left: auto;
 }

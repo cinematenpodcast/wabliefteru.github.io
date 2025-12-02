@@ -12,6 +12,11 @@
       "source": "/luister", 
       "destination": "https://open.spotify.com/show/7163qoNT9QZ88uAKmIFk6C?si=0c3a76a4c9064e52", 
       "permanent": true 
+    },
+    { 
+      "source": "/listen", 
+      "destination": "https://open.spotify.com/show/7163qoNT9QZ88uAKmIFk6C?si=2f3d7e0ceed54936", 
+      "permanent": true 
     }
   ]
 } 
